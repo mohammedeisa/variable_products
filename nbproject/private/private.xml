@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/wamp/www/variable_product/resources/views/attribute/edit.blade.php</file>
+            <file>file:/E:/wamp/www/variable_product/public/js/variable_products.js</file>
+            <file>file:/E:/wamp/www/variable_product/app/Http/Controllers/AttributesController.php</file>
+            <file>file:/E:/wamp/www/variable_product/app/Http/Controllers/ProductsController.php</file>
+            <file>file:/E:/wamp/www/variable_product/resources/views/product/fields/variations_field.blade.php</file>
+            <file>file:/E:/wamp/www/variable_product/resources/views/attribute/create.blade.php</file>
+            <file>file:/E:/wamp/www/variable_product/resources/views/product/fields/new_variation_block.blade.php</file>
+            <file>file:/E:/wamp/www/variable_product/resources/views/product/fields/variation_block.blade.php</file>
+            <file>file:/E:/wamp/www/variable_product/resources/views/product/create.blade.php</file>
+        </group>
+    </open-files>
+</project-private>
