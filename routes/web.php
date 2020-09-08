@@ -16,71 +16,112 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-//Products routes
+//Products routes/////////////////////////////////////////////////////////////////////
 Route::get('/product', [
-    'uses' => 'ProductsController@index',
+    'uses' => 'backend\ProductsController@index',
     'as' => 'product.index'
 ]);
 Route::get('/product/create', [
-    'uses' => 'ProductsController@create',
+    'uses' => 'backend\ProductsController@create',
     'as' => 'product.create'
 ]);
 
 Route::post('/product/store', [
-    'uses' => 'ProductsController@store',
+    'uses' => 'backend\ProductsController@store',
     'as' => 'product.store'
 ]);
 
 
 Route::any('/product/edit/{id?}', [
-    'uses' => 'ProductsController@edit',
+    'uses' => 'backend\ProductsController@edit',
     'as' => 'product.edit'
 ]);
 
 Route::post('/product/add_variation_block', [
-    'uses' => 'ProductsController@add_variation_block',
+    'uses' => 'backend\ProductsController@add_variation_block',
     'as' => 'product.addVariationBlock'
 ]);
 
 Route::get('/product/delete/{id}', [
-    'uses' => 'ProductsController@delete',
+    'uses' => 'backend\ProductsController@delete',
     'as' => 'product.delete'
 ]);
 
 
 Route::post('/product/delete_variation', [
-    'uses' => 'ProductsController@delete_variation',
+    'uses' => 'backend\ProductsController@delete_variation',
     'as' => 'product.delete_variation'
 ]);
 
+//Frontend routes/////////////////////////////////////////////////////////////////////
+Route::get('/products', [
+    'uses' => 'frontend\ProductsController@list',
+    'as' => 'product.list'
+]);
 
-//Categories routes
+
+Route::get('/product/{id}', [
+    'uses' => 'frontend\ProductsController@show',
+    'as' => 'product.show'
+]);
+
+Route::get('get_product_JSON/{id}', [
+    'uses' => 'frontend\ProductsController@get_product_JSON',
+    'as' => 'product.get_product_JSON'
+]);
+
+Route::get('products/filter', [
+    'uses' => 'frontend\ProductsController@filter',
+    'as' => 'product.filter'
+]);
+
+Route::get('/products/search/', [
+    'uses' => 'frontend\ProductsController@search',
+    'as' => 'product.search'
+]);
+
+
+Route::get('/products/sort_by_category/', [
+    'uses' => 'frontend\ProductsController@sort_by_category',
+    'as' => 'product.sort_by_category'
+]);
+//Orders routes/////////////////////////////////////////////////////////////////////
+Route::post('/orders/place_an_order/', [
+    'uses' => 'frontend\OrdersController@place_an_order',
+    'as' => 'order.place_an_order'
+]);
+//Categories routes/////////////////////////////////////////////////////////////////////
 Route::get('/category/search/{term?}/{page?}', [
-    'uses' => 'CategoriesController@search',
+    'uses' => 'backend\CategoriesController@search',
     'as' => 'category.search'
 ]);
 
-//Attributes routes
+//Attributes routes/////////////////////////////////////////////////////////////////////
 Route::get('/attribute', [
-    'uses' => 'AttributesController@index',
+    'uses' => 'backend\AttributesController@index',
     'as' => 'attribute.index'
 ]);
 Route::get('/attribute/create', [
-    'uses' => 'AttributesController@create',
+    'uses' => 'backend\AttributesController@create',
     'as' => 'attribute.create'
 ]);
 
 Route::post('/attribute/store', [
-    'uses' => 'AttributesController@store',
+    'uses' => 'backend\AttributesController@store',
     'as' => 'attribute.store'
 ]);
 
 Route::any('/attribute/edit/{id?}', [
-    'uses' => 'AttributesController@edit',
+    'uses' => 'backend\AttributesController@edit',
     'as' => 'attribute.edit'
 ]);
 
 Route::get('/attribute/search/{term?}/{page?}', [
-    'uses' => 'AttributesController@search',
+    'uses' => 'backend\AttributesController@search',
     'as' => 'attribute.search'
 ]);
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

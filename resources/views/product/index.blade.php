@@ -52,7 +52,8 @@
                                 <td class=" ">{{ $product->category->name ?? ''}}</td>                               
                                 <td class=" last">
                                     <a href="{{ url('/product/edit/'.$product->id) }}">Edit</a> | 
-                                    <a href="{{ url('/product/delete/'.$product->id) }}">Delete</a>
+                                    <a href="{{ url('/product/delete/'.$product->id) }}">Delete</a> | 
+                                    <a href="{{ url('/product/'.$product->id) }}">Show</a>
                                 </td>
                             </tr>
                             @endforeach

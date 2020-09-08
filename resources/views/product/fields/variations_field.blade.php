@@ -19,7 +19,7 @@
 
                     <div class="col-md-8 col-sm-8 ">
                         @if(isset($product))
-                        {!! Form::select('attributes[]', $product->attributes->pluck('name','id')->all(), $product->attributes->pluck('id')->all(), ['class' => 'attribute-selector form-control', 'multiple' => 'multiple','required'=>'required']) !!}
+                        {!! Form::select('attributes[]', $product->attributes->pluck('name','id')->all(), $product->attributes->pluck('id')->all(), ['class' => 'attribute-selector form-control', 'multiple' => 'multiple']) !!}
                         @else
                         {!! Form::select('attributes[]', [], [], ['class' => 'attribute-selector form-control', 'multiple' => 'multiple','required'=>'required']) !!}
                         @endif

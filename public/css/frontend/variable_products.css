@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 12, 2020, 3:11:38 AM
+    Author     : Ezz
+*/
+
+.bark-gray-background{
+    background: #2A3F54;
+}
+.ajax-loading-icon{
+    display: none;
+}
+footer{margin-left: 0!important;}
+.page-title{
+    background: #f4f4f4;
+}
+#cart-box-content,#item-in-cart-box-template{
+    display: none;
+}
+.popover-body{
+
+    min-width: 150px;
+    min-height: 200px;
+}
+
+.popover{
+    max-width: max-content !important;
+}
+.popover-body{
+        max-width: 420px;
+}
